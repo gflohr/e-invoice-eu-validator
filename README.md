@@ -17,6 +17,8 @@ validator.
 - [Starting the Server](#starting-the-server)
 	- [Released Version](#released-version)
 	- [In Development Mode](#in-development-mode)
+- [API Usage](#api-usage)
+- [Versioning](#versioning)
 - [Copyright](#copyright)
 - [Disclaimer](#disclaimer)
 
@@ -52,6 +54,53 @@ Inspect the sources if you want to run a jar file without dependencies.
 mvn clean install
 PORT=8080 mvn compile exec:java -Dexec.mainClass=com.cantanea.validator.App
 ```
+
+## API Usage
+
+The service has one single endpoint `/validate`. It takes one single URL
+parameter `invoice` that contains the invoice file.
+
+```shell
+curl -v -X POST -Finvoice=@invoice.xml http://localhost:7070/validate
+```
+
+This would validate the invoice in the file `invoice.xml`. The hybrid
+formats Factur-X resp. ZUGFeRD can also be validated:
+
+```shell
+curl -v -X POST -Finvoice=@invoice.pdf http://localhost:7070/validate
+```
+
+If the document is valid, you will receive a response with a status code of 200.
+For invalid documents, 400 is sent.
+
+The output is an XML validation report, for example:
+
+```xml
+<validation filename="invoice.xml" datetime="2025-04-25 13:36:39">
+  <xml>
+    <info>
+      <version>2</version>
+      <profile>urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0</profile>
+      <validator version="2.16.4"/>
+      <rules>
+        <fired>13</fired>
+        <failed>0</failed>
+      </rules>
+      <duration unit="ms">776</duration>
+    </info>
+    <summary status="valid"/>
+  </xml>
+  <summary status="valid"/>
+</validation>
+```
+
+## Versioning
+
+The versions of this package follow that of
+[MustangProject](https://github.com/ZUGFeRD/mustangproject). In other words,
+when you are using version 2.16.4 of this package, it uses MustangProject
+version 2.16.4 under the hood.
 
 ## Copyright
 
