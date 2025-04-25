@@ -73,14 +73,17 @@ git commit -a -m "bump version to $version"
 echo "merge into main"
 git switch main && git merge --no-edit "$branch"
 
+echo "switch to main"
+git switch main
+
 echo "tag with release tag '$tag'"
-git tag "$tag" || exit 1
+git tag "$tag"
 
 echo "push branches"
-git push origin main "$branch" || exit 1
+git push origin main "$branch"
 
 echo "push tags"
-git push --tags || exit 1
+git push --tags
 
 echo "delete release branch"
 git branch -d "$branch"
