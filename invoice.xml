@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:CustomizationID>urn:cen.eu:en16931:2017#compliant#urn:xeinkauf.de:kosit:xrechnung_3.0</cbc:CustomizationID>
+	<cbc:ProfileID>urn:fdc:peppol.eu:2017:poacc:billing:01:1.0</cbc:ProfileID>
+	<cbc:ID>142802</cbc:ID>
+	<cbc:IssueDate>2025-01-16</cbc:IssueDate>
+	<cbc:InvoiceTypeCode>380</cbc:InvoiceTypeCode>
+	<cbc:Note>Herr F.Fröhlich,mail 20.12.202
+23132
+10961 Berlin,Nostitzstr. 60, Nos Grundschule</cbc:Note>
+	<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+	<cbc:BuyerReference>NA</cbc:BuyerReference>
+	<cac:OrderReference>
+		<cbc:ID>NA</cbc:ID>
+		<cbc:SalesOrderID>120965</cbc:SalesOrderID>
+	</cac:OrderReference>
+	<cac:DespatchDocumentReference>
+		<cbc:ID>176862</cbc:ID>
+	</cac:DespatchDocumentReference>
+	<cac:ProjectReference>
+		<cbc:ID>446991</cbc:ID>
+	</cac:ProjectReference>
+	<cac:AccountingSupplierParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="9930">DE197571105</cbc:EndpointID>
+			<cac:PartyName>
+				<cbc:Name>Holzindustrie Nahmitz GmbH</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Nahmitz Ausbau 3</cbc:StreetName>
+				<cbc:CityName>Kloster Lehnin</cbc:CityName>
+				<cbc:PostalZone>14797</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:CompanyID>DE197571105</cbc:CompanyID>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>Holzindustrie Nahmitz GmbH</cbc:RegistrationName>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Name>FIXME</cbc:Name>
+				<cbc:Telephone>+49 3382 7059 20</cbc:Telephone>
+				<cbc:ElectronicMail>info@markpine.de</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cac:Party>
+			<cbc:EndpointID schemeID="EM">FIXME@example.com</cbc:EndpointID>
+			<cac:PartyIdentification>
+				<cbc:ID>10093</cbc:ID>
+			</cac:PartyIdentification>
+			<cac:PartyName>
+				<cbc:Name>GaLa- und Sportplatzbau GmbH</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Am Fuchsbau 15 b</cbc:StreetName>
+				<cbc:CityName>Seddiner See</cbc:CityName>
+				<cbc:PostalZone>14554</cbc:PostalZone>
+				<cac:Country>
+					<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyLegalEntity>
+				<cbc:RegistrationName>GaLa- und Sportplatzbau GmbH</cbc:RegistrationName>
+			</cac:PartyLegalEntity>
+			<cac:Contact>
+				<cbc:Name>Rüdiger Brandenburg</cbc:Name>
+				<cbc:Telephone>033205 6059 00</cbc:Telephone>
+				<cbc:ElectronicMail>FIXME@example.com</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2025-01-08</cbc:ActualDeliveryDate>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>
+		<cbc:PaymentID>RECHNUNG Nr. 142802</cbc:PaymentID>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>DE28100500001010055700</cbc:ID>
+			<cbc:Name>Holzindustrie Nahmitz GmbH</cbc:Name>
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID>BELA DEBE</cbc:ID>
+			</cac:FinancialInstitutionBranch>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note>bis 26.01.2025 abzüglich 2% Skonto auf 1233,44 EUR</cbc:Note>
+	</cac:PaymentTerms>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="EUR">210.02</cbc:TaxAmount>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="EUR">1105.35</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="EUR">210.02</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>19.00</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="EUR">1105.35</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="EUR">1105.35</cbc:TaxExclusiveAmount>
+		<cbc:TaxInclusiveAmount currencyID="EUR">1315.37</cbc:TaxInclusiveAmount>
+		<cbc:PayableAmount currencyID="EUR">1315.37</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>1</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="MTR">100</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="EUR">839.00</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>1 Sibir. Lärche gesägt+ 100
+32,0 mm x 205,0 mm = 100 lfdm
+25 Stk 32mmx205mm x 4m= 0,656 cbm
+feinjährige sibirische Wuchsstruktur</cbc:Description>
+			<cbc:Name>Sibir. Lärche gesägt+</cbc:Name>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>19.00</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">8.39</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>2</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="H87">250</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="EUR">197.50</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>2 Pflock Hartholz. 250
+4,0 cm x 4,0 cm x 50,0 cm = 250 Stück
+250 Stk 4cmx4cm x 50cm= 0,2 cbm
+Eiche/Robinie, gesägt + gespitzt</cbc:Description>
+			<cbc:Name>Pflock Hartholz.</cbc:Name>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>19.00</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">0.79</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+	<cac:InvoiceLine>
+		<cbc:ID>3</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="C62">1</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="EUR">68.85</cbc:LineExtensionAmount>
+		<cac:Item>
+			<cbc:Description>3 Anlieferung - Anteil 1</cbc:Description>
+			<cbc:Name>Anlieferung - Anteil</cbc:Name>
+			<cac:ClassifiedTaxCategory>
+				<cbc:ID>S</cbc:ID>
+				<cbc:Percent>19.00</cbc:Percent>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+				</cac:TaxScheme>
+			</cac:ClassifiedTaxCategory>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="EUR">68.85</cbc:PriceAmount>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>
