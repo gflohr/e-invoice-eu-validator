@@ -79,8 +79,8 @@ git switch main
 echo "tag with release tag '$tag'"
 git tag "$tag"
 
-echo "push branches"
-git push origin main "$branch"
+echo "push main"
+git push origin main
 
 echo "push tags"
 git push --tags
