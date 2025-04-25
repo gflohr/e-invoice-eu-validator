@@ -14,6 +14,7 @@ Minimal API wrapper around the [MustangProject](https://github.com/ZUGFeRD/musta
 validator.
 
 - [Description](#description)
+- [Generating Invoices](#generating-invoices)
 - [Starting the Server](#starting-the-server)
 	- [Released Version](#released-version)
 	- [In Development Mode](#in-development-mode)
@@ -31,7 +32,18 @@ comes with a CLI.
 
 The problem with the CLI is that it starts up very slowly and can validate
 only one document at a time. This server offers the validation
-features of MustangProject as a minimal API.
+features of MustangProject as a minimal server API. This allows performant
+batch validation of invoices.
+
+It also avoids privacy issues because the invoices do not have to be sent
+over the internet to third-party services.
+
+## Generating Invoices
+
+This project is a sister project of
+[E-Invoice-EU](https://github.com/gflohr/e-invoice-eu). See
+[there](https://github.com/gflohr/e-invoice-eu) for information about how to
+*create* electronic invoices.
 
 ## Starting the Server
 
@@ -77,6 +89,8 @@ For invalid documents, 400 is sent.
 The output is an XML validation report, for example:
 
 ```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
 <validation filename="invoice.xml" datetime="2025-04-25 13:36:39">
   <xml>
     <info>
@@ -88,6 +102,38 @@ The output is an XML validation report, for example:
         <failed>0</failed>
       </rules>
       <duration unit="ms">776</duration>
+    </info>
+    <summary status="valid"/>
+  </xml>
+  <summary status="valid"/>
+</validation>
+```
+
+For the hybrid Factur-X/ZUGFeRD formats, you will see three summaries; the
+first one for the PDF validation, the second one for the validation of the
+embedded XML, and the third one for that overall status:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+
+<validation filename="invoice.pdf" datetime="2025-04-25 14:36:22">
+  <pdf>ValidationResult [flavour=3b, totalAssertions=6686, assertions=[], isCompliant=true]
+    <info>
+      <signature>unknown</signature>
+      <duration unit="ms">1723</duration>
+    </info>
+    <summary status="valid"/>
+  </pdf>  
+  <xml>
+    <info>
+      <version>2</version>
+      <profile>urn:cen.eu:en16931:2017#conformant#urn:factur-x.eu:1p0:extended</profile>
+      <validator version="null"/>
+      <rules>
+        <fired>69</fired>
+        <failed>0</failed>
+      </rules>
+      <duration unit="ms">1217</duration>
     </info>
     <summary status="valid"/>
   </xml>
