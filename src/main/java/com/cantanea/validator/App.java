@@ -26,7 +26,6 @@ public class App {
 			System.out.print(xmlResult);
 			int statusCode = validator.wasValid() ? 200 : 400;
 			ctx.status(statusCode).contentType("application/xml").result(xmlResult);
-			ctx.status(400);
 		});
 
 		app.post("/validate", ctx -> {
@@ -43,7 +42,6 @@ public class App {
 			int statusCode = validator.wasValid() ? 200 : 400;
 
 			ctx.status(statusCode).contentType("application/xml").result(xmlResult);
-			ctx.status(400);
 
 		});
 	}
